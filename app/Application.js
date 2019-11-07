@@ -8,6 +8,8 @@ Ext.define('Tasks.Application', {
 
     name: 'Tasks',
 
+    defaultToken: 'login',
+
     quickTips: false,
     platformConfig: {
         desktop: {

@@ -5,10 +5,5 @@ Ext.define("Tasks.view.main.Main", {
     "Tasks.service.L10nService" // wymusza kilejność ładowania
   ],
   controller: "main",
-  title: "Tasks manager",
-  items: [
-    {
-      xtype: "tasks"
-    }
-  ]
+  title: "Tasks manager"
 });
