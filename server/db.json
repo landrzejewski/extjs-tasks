@@ -2,9 +2,29 @@
   "tasks": [
     {
       "id": 1,
-      "name": "Learn Ext JS",
+      "name": "Learn Ext JS2",
       "description": "Easy task",
-      "isCompleted": false
+      "isCompleted": true,
+      "dueDate": null,
+      "userId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "login": "admin",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "firstName": "Marek",
+      "lastName": "Nowak",
+      "login": "user",
+      "password": "123",
+      "role": "user"
     }
   ]
 }

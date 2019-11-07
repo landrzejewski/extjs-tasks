@@ -1,0 +1,12 @@
+POST http://localhost:3000/auth/token
+Content-Type: application/json
+
+{ "login": "admin", "password": "123" }
+
+###
+
+GET http://localhost:3000/tasks
+Accept: application/json
+Authorization: 44aebc2d-0a91-431d-b571-c9ecc1776666
+
+###
