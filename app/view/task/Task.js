@@ -5,6 +5,9 @@ Ext.define("Tasks.view.task.Task", {
   viewModel: {
     type: "task"
   },
+  bind: {
+    title: "{taskTitle}"
+  },
   bodyPadding: 100,
   defaults: {
     xtype: "textfield",
@@ -15,16 +18,16 @@ Ext.define("Tasks.view.task.Task", {
   items: [
     {
       fieldLabel: Tasks.L10n("name"),
-      bind: '{task.name}'
+      bind: "{task.name}"
     },
     {
       fieldLabel: Tasks.L10n("description"),
-      bind: '{task.description}'
+      bind: "{task.description}"
     },
     {
       xtype: "datefield",
       fieldLabel: Tasks.L10n("dueDate"),
-      bind: '{task.dueDate}'
+      bind: "{task.dueDate}"
     }
   ],
   buttons: [
