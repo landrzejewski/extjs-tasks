@@ -16,16 +16,21 @@ Ext.define('Tasks.view.login.Login', {
     },
     items: [
         {
-            fieldLabel: Tasks.L10n('login')
+            fieldLabel: Tasks.L10n('login'),
+            reference: 'username'
         },
         {
             fieldLabel: Tasks.L10n('password'),
-            inputType: 'password'
+            inputType: 'password',
+            reference: 'password'
         }
     ],
     buttons: [
         {
-            text: Tasks.L10n('ok')
+            text: Tasks.L10n('ok'),
+            listeners: {
+                click: 'onLogin'
+            }
         }
     ]
 });

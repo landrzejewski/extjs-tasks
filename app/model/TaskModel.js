@@ -8,7 +8,7 @@ Ext.define("Tasks.model.TaskModel", {
     { name: "dueDate", type: "date", dateFormat: "timestamp" }
   ],
   proxy: {
-    type: "rest",
+    type: "secured-rest",
     url: "http://localhost:3000/tasks",
     writer: {
       writeAllFields: true

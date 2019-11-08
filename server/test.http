@@ -7,6 +7,6 @@ Content-Type: application/json
 
 GET http://localhost:3000/tasks
 Accept: application/json
-Authorization: 44aebc2d-0a91-431d-b571-c9ecc1776666
+Authorization: e536ea2d-caa9-47af-bf83-f83a01036ec2
 
 ###

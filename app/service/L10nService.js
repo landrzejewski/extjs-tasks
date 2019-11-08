@@ -15,7 +15,10 @@ Ext.define(
       loginForm: "Login form",
       login: "Login",
       password: "Password",
-      ok: "Ok"
+      ok: "Ok",
+      logout: "Logout",
+      alert: "Alert",
+      authenticationFailure: "Invalid login or password"
     },
     pl: {
       title: "Zadania",
@@ -26,7 +29,10 @@ Ext.define(
       loginForm: "Formularz logowania",
       login: "Login",
       password: "Hasło",
-      ok: "Ok"
+      ok: "Ok",
+      logout: "Wyloguj",
+      alert: "Uwaga",
+      authenticationFailure: "Niepoprawny login lub hasło"
     }
   },
   function() {
