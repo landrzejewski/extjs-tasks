@@ -7,6 +7,17 @@ Ext.define("Tasks.view.main.MainController", {
     tasks: {
       before: "authorize",
       action: "showTasks"
+    },
+    "task/:id": {
+      before: "authorize",
+      action: "showTask",
+      condition: {
+        ":id": "(\\d+)"
+      }
+    },
+    "new-task": {
+      before: "authorize",
+      action: "showNewTask"
     }
   },
   listen: {
@@ -36,6 +47,21 @@ Ext.define("Tasks.view.main.MainController", {
   showTasks: function() {
     this.showViewWithAlias("tasks");
   },
+  showTask: function(id) {
+    function onTaskLoaded(task) {
+      const form = Ext.widget("task");
+      form.getViewModel().set("task", task);
+      this.showView(form);
+    }
+
+    Tasks.model.TaskModel.load(id, {
+      success: onTaskLoaded,
+      scope: this
+    });
+  },
+  showNewTask: function() {
+    this.showViewWithAlias("task");
+  },
   showViewWithAlias: function(alias) {
     const view = Ext.widget(alias);
     this.showView(view);
@@ -44,6 +70,9 @@ Ext.define("Tasks.view.main.MainController", {
     const panel = this.getView();
     panel.removeAll();
     panel.add(view);
+  },
+  onNewTask: function() {
+    this.redirectTo("new-task", false);
   },
   onLogout: function() {
     this.securityService.logout();

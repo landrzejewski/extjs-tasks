@@ -16,9 +16,13 @@ Ext.define(
       login: "Login",
       password: "Password",
       ok: "Ok",
+      save: "Save",
+      cancel: "Cancel",
       logout: "Logout",
       alert: "Alert",
-      authenticationFailure: "Invalid login or password"
+      task: "Task",
+      authenticationFailure: "Invalid login or password",
+      newTask: "New task"
     },
     pl: {
       title: "Zadania",
@@ -30,9 +34,13 @@ Ext.define(
       login: "Login",
       password: "Hasło",
       ok: "Ok",
+      save: "Zapisz",
+      cancel: "Anuluj",
       logout: "Wyloguj",
       alert: "Uwaga",
-      authenticationFailure: "Niepoprawny login lub hasło"
+      task: "Zadanie",
+      authenticationFailure: "Niepoprawny login lub hasło",
+      newTask: "Nowe zadanie"
     }
   },
   function() {

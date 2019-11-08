@@ -9,6 +9,13 @@ Ext.define("Tasks.view.main.Main", {
   controller: "main",
   title: "Tasks manager",
   tbar: [
+    {
+      xtype: "button",
+      text: Tasks.L10n("newTask"),
+      listeners: {
+        click: "onNewTask"
+      }
+    },
     "->", // Ext.Toolbar.Fill
     {
       xtype: "button",

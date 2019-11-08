@@ -27,7 +27,13 @@ Ext.define("Tasks.view.tasks.Tasks", {
       xtype: "checkcolumn",
       text: Tasks.L10n("isCompleted"),
       dataIndex: "isCompleted",
-      flex: 1
+      flex: 1,
+      listeners: {
+        checkchange: "onTaskCompletedChange"
+      }
     }
-  ]
+  ],
+  listeners: {
+    itemdblclick: "onEditTask"
+  }
 });
