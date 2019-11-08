@@ -8,6 +8,7 @@ Ext.define("Tasks.view.tasks.Tasks", {
   },
   columns: [
     {
+      xtype: 'task-name-column',
       text: Tasks.L10n("name"),
       dataIndex: "name",
       flex: 1

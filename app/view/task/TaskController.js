@@ -10,7 +10,13 @@ Ext.define("Tasks.view.task.TaskController", {
     this.redirectTo("tasks", false);
   },
   onSave: function() {
-    this.getViewModel().get('task').save();
-    this.redirectTo("tasks", false);
+    const task = this.getViewModel().get('task');
+    console.log(task.getValidation().data);
+    if (task.isValid()) {
+        task.save();
+        this.redirectTo('tasks', false);
+    } else {
+        Ext.Msg.alert(Tasks.L10n('alert'), Tasks.L10n('validationError'));
+    }
   }
 });

@@ -3,3 +3,8 @@
  *  styling should be located the view's corresponding scss file.
  */
 $enable-font-awesome: dynamic(true);
+
+.completed {
+    text-decoration: line-through;
+    color: #00c853;
+}

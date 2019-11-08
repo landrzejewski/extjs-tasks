@@ -7,6 +7,10 @@ Ext.define("Tasks.model.TaskModel", {
     { name: "isCompleted", type: "boolean" },
     { name: "dueDate", type: "date", dateFormat: "timestamp" }
   ],
+  validators: {
+    name: { type: "presence", message: "Field is required" },
+    description: { type: "length", message: "Field is required", min: 5 }
+  },
   proxy: {
     type: "secured-rest",
     url: "http://localhost:3000/tasks",

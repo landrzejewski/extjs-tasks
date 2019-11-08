@@ -22,7 +22,8 @@ Ext.define(
       alert: "Alert",
       task: "Task",
       authenticationFailure: "Invalid login or password",
-      newTask: "New task"
+      newTask: "New task",
+      validationError: "Invalid input"
     },
     pl: {
       title: "Zadania",
@@ -40,7 +41,8 @@ Ext.define(
       alert: "Uwaga",
       task: "Zadanie",
       authenticationFailure: "Niepoprawny login lub hasło",
-      newTask: "Nowe zadanie"
+      newTask: "Nowe zadanie",
+      validationError: "Invalid input"
     }
   },
   function() {

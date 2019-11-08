@@ -18,7 +18,9 @@ Ext.define("Tasks.view.task.Task", {
   items: [
     {
       fieldLabel: Tasks.L10n("name"),
-      bind: "{task.name}"
+      bind: "{task.name}",
+      allowBlank: false
+      //vtype: 'postalcode'
     },
     {
       fieldLabel: Tasks.L10n("description"),
@@ -41,7 +43,8 @@ Ext.define("Tasks.view.task.Task", {
       text: Tasks.L10n("save"),
       listeners: {
         click: "onSave"
-      }
+      },
+      formBind: true
     }
   ]
 });
